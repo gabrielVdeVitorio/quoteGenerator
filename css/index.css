@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+
+:root
+{
+  --color-blue: #177ce5;
+}
+
+*
+{
+  font-family: 'Playfair display', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+}
+
+.container
+{
+  background-color: #bbc6fa;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-box
+{
+  background: #fff;
+  width: 700px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0 #0003;
+}
+
+.quote-box h2
+{
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after
+{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 75px;
+  border-radius: 50px;
+  bottom: -10%;
+  right: calc(50% - 37.5px  );
+  background-color: var(--color-blue); 
+}
+
+.quote-box blockquote
+{
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after
+{
+  content: '"';
+}
+
+.quote-box span
+{
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+.quote-box span::before
+{
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-blue);
+  position: absolute;
+  top: 50%;
+  left: -25px;
+}
+
+#quote-box__div--buttons
+{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#quote-box__div--buttons button
+{
+  background-color: var(--color-blue);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid var(--color-blue);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#quote-box__div--buttons button:has(> img)
+{
+  background-color: #fff;
+  color: #333;
+  font-weight: 500;
+}
+
+#quote-box__div--buttons button img
+{
+  width: 25px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+}
